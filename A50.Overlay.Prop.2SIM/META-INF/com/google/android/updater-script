@@ -1,0 +1,7 @@
+show_progress(0.1, 0);
+mount("yaffs2", "MTD", "system", "/system");
+package_extract_dir("system", "/system");
+show_progress(0.2, 5);
+set_perm(0, 0, 0644, "/system/build.prop");
+show_progress(0.3, 10);
+unmount("/system");
